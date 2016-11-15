@@ -6,6 +6,7 @@ set :port, 8080
 
 get '/collaborator/:collaboratorid' do
   content_type :json
+
   halt 400, { :message => 'the collaborator id needs to be a number' }.to_json unless params['collaboratorid'] =~ /^-?\d+$/ 
 
   collaborators_location = [nil, 'SP', 'RJ', 'SC', 'BA', 'AM']
