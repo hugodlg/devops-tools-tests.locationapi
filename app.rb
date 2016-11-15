@@ -2,7 +2,7 @@ require 'json'
 require 'sinatra'
 
 set :bind, '0.0.0.0'
-set :port, 80
+set :port, 8080
 
 get '/collaborator/:collaboratorid' do
   content_type :json
